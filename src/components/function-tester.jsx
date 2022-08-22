@@ -50,7 +50,7 @@ export default function FunctionTester({ children }) {
   const [output, setOutput] = useState();
 
   function handleClick() {
-    fetch("/.netlify/functions/hello-world")
+    fetch("http://localhost:8888/.netlify/functions/hello-world")
       .then((res) => res.text())
       .then((result) => setOutput(result))
       .catch((err) => {
